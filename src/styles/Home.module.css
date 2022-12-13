@@ -21,6 +21,10 @@
   align-items: center;
 }
 
+.input{
+  background-color: red; 
+} /*Cor de background da classe na página HOME*/
+
 .footer a {
   display: flex;
   justify-content: center;
