@@ -1,11 +1,9 @@
 import Navbar_home from './Navbar_home'
-const Layout_home = ({ children }) =>
+const Layout_home = () =>
 {
     return (
         <div className="content">
-            <Navbar_home>
-                {children}
-            </Navbar_home>
+            <Navbar_home />
         </div>
     )
 

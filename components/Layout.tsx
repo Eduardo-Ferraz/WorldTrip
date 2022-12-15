@@ -1,11 +1,9 @@
 import Navbar from './Navbar'
-const Layout = ({ children }) =>
+const Layout = () =>
 {
     return (
         <div className="content">
-            <Navbar>
-                {children}
-            </Navbar>
+            <Navbar />
         </div>
     )
 
