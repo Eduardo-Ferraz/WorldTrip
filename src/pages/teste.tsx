@@ -21,10 +21,10 @@ export default function Home() {
       <main>
         <Flex h={"100vh"} justifyContent="center" alignItems={"center"} bg="lightblue">
           <Box bg="whiteAlpha.400" borderRadius="xl" padding={"10"}>
-            <Text>
+            <Text bg="highlight">
               {texto}{texto}{texto}
             </Text>
-            <Input
+            <Input 
               type={'text'}
               onChange={(event) => setTexto(event.target.value)}
             ></Input>

@@ -25,8 +25,8 @@ export default function Home() {
             <Input onChange={(event) => setTexto(event.target.value)}>
             </Input>
           </Box>
-          <Box bg="whiteAlpha.400" borderRadius="xl" padding={"10"}>
-            <Text>{texto}</Text>
+          <Box bg="light.info" borderRadius="xl" padding={"10"}>
+            <Text bg="highlight">{texto}</Text>
             <Input onChange={(event) => setTexto(event.target.value)}>
             </Input>
           </Box>
