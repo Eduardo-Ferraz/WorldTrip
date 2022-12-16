@@ -1,4 +1,5 @@
 import Navbar from './Navbar'
+
 const Layout = () =>
 {
   return (
@@ -7,4 +8,5 @@ const Layout = () =>
     </div>
   )
 }
+
 export default Layout

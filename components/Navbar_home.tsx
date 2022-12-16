@@ -10,4 +10,5 @@ const Navbar_home = () =>
     </nav>
   )
 }
+
 export default Navbar_home
