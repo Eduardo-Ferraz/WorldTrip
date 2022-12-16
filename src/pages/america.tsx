@@ -5,8 +5,7 @@ import Navbar from '../../components/Navbar'
 
 export default function America()
 {
-  const [texto, setTexto] = useState('')
-
+  const [texto, setTexto] = useState('');
   return (
     <div>
       <Head>
