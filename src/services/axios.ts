@@ -1,9 +1,19 @@
-import axios from "axios";
+import axios, { AxiosError } from "axios";
+
+type IHit = {
+  webformatURL: string;
+  likes: number;
+
+}
+type IAxiosResponse = {
+  hits: IHit[];
+  total: number;
+  totalHits: number;
+}
 
 async function getPhoto(continente: string){
-
-
-    var respFinal = await axios.get('http://pixabay.com/api/' ,{headers:{
+    try {
+      const response = await axios.get<IAxiosResponse>('http://pixabay.com/api/' ,{headers:{
 
     "Accept-Encoding": "gzip,deflate,compress"  
 
@@ -14,20 +24,13 @@ async function getPhoto(continente: string){
     'safesearch':true,
     'image_type':'photo'
 
-    }}).then(function(resposta){
+    }})
 
-        return resposta.data["hits"][0]["previewURL"];
-
-    }).catch(function(error){
-
-        console.log(error);
-
-    });   
-
-    console.log(respFinal);
-
-    return respFinal.html;
-
+     return response.data
+  } catch(error) {
+    console.log(error);
+    return null
+  } 
 }
 
 export default getPhoto

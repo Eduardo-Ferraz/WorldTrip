@@ -1,11 +1,38 @@
-import { Box, Flex, Input, Text } from '@chakra-ui/react'
+import { Box, Flex, Input, Text, Image, Button } from '@chakra-ui/react'
 import Head from 'next/head'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Navbar from '../../components/Navbar'
+import getPhoto from '../services/axios'
 
-export default function Europa()
-{
-  const [texto, setTexto] = useState('')
+type IHit = {
+  webformatURL: string;
+  likes?: number ;
+}
+
+type IHits = {
+  hits: IHit[];
+  total: number;
+  totalHits: number;
+}
+
+export default function Europa(){
+  const [texto, setTexto] = useState<string>("")
+  const [imagesUrl, setImagesUrl] = useState<IHits | null>();
+  const [ count, setCount ] = useState(0);
+
+  
+
+  useEffect(() => {
+    const getNewPhoto = async () => {
+    const photos = await getPhoto("europa");
+      
+    setImagesUrl(photos)
+    console.log(photos);   
+    }
+
+    getNewPhoto();
+    
+  },[]);
 
   return (
     <div>
@@ -20,8 +47,19 @@ export default function Europa()
       </Head>
       <Navbar/>
       <main>
-        <Flex h={"100vh"} justifyContent="center" alignItems={"center"} bg="white">
+        <Flex 
+        h="100vh" 
+        direction={["column", "row"]}
+        justify="center" 
+        align="center" 
+        bg={["white","pink"]}>
+          <Text >{imagesUrl?.hits[2].likes}</Text>
+          <Image src={imagesUrl?.hits[count].webformatURL} />
+            { imagesUrl !== null && imagesUrl !== undefined &&( 
+              <><Image src={imagesUrl.hits[0].webformatURL} /><Text>{imagesUrl?.total} Nao eh</Text></>
+            )}
         </Flex>
+        <Button bg = "highlight" onClick={() => setCount(count+1)}>Next Image</Button>
       </main>
     </div>
   )
