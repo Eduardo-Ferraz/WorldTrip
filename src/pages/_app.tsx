@@ -5,9 +5,9 @@ import 'src/styles/globals.css'
 
 const theme = extendTheme({
   fonts: {
-    body:  "Poppins, sans-serif",
-    heading:  "Poppins, sans-serif",
-    mono:  "Poppins, sans-serif",
+    body: "Poppins, sans-serif",
+    heading: "Poppins, sans-serif",
+    mono: "Poppins, sans-serif",
   },
   colors: {
     highlight: "#FFBA08",
@@ -26,7 +26,8 @@ const theme = extendTheme({
   },
 })
 
-export default function App({ Component, pageProps }: AppProps) {
+export default function App({ Component, pageProps }: AppProps)
+{
   return (
     <ChakraProvider theme={theme}>
       <Component {...pageProps} />
