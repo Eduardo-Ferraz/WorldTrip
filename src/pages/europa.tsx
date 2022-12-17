@@ -52,7 +52,7 @@ export default function Europa(){
         direction={["column", "row"]}
         justify="center" 
         align="center" 
-        bg={["white","pink"]}>
+        bg={["white"]}>
           <Text >{imagesUrl?.hits[2].likes}</Text>
           <Image src={imagesUrl?.hits[count].webformatURL} />
             { imagesUrl !== null && imagesUrl !== undefined &&( 

@@ -25,32 +25,3 @@ a {
     background: black;
   }
 }
-
-.content {
-  max-width: 960px;
-  margin: 0 auto;
-}
-
-nav {
-  display: inline-block;
-  width: 100%;
-  background-color: #F5F8FA;
-  padding: 20px;
-  height: 100px;
-  justify-content: center;
-  align-items: center;
-}
-
-nav .back {
-  position: absolute;
-  width: 32px;
-  height: 32px;
-  left: 140px;
-  top: 34px;
-}
-
-nav .logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}

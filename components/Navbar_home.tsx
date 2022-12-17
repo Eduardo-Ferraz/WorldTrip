@@ -1,14 +1,26 @@
-const Navbar_home = () =>
+import
+  {
+    Box,
+    Flex,
+    HStack,
+    useColorModeValue,
+  } from '@chakra-ui/react';
+
+export default function Simple()
 {
   return (
-    <nav>
-      <div className="logo">
-        <a href="/">
-          <img src="/Logo.png" width={200} height={77} />
-        </a>
-      </div>
-    </nav>
-  )
+    <>
+      <Box bg={useColorModeValue('#F5F8FA', 'gray.900')} px={4}>
+        <Flex h={24} alignItems={'center'} justifyContent={'center'}>
+          <HStack spacing={8} alignItems={'center'}>
+            <Box><a href="/">
+              <div className="logo">
+                <img src="/Logo.png" width={200} height={77} />
+              </div>
+            </a></Box>
+          </HStack>
+        </Flex>
+      </Box>
+    </>
+  );
 }
-
-export default Navbar_home
