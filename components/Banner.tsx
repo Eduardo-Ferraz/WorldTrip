@@ -4,32 +4,29 @@ import { Show, Hide } from '@chakra-ui/react'
 import
 {
   Box,
+  Flex,
+  Text
 } from '@chakra-ui/react';
 
 
 interface BannerProps {
-  bg: string[]
+  bg: string
 }
 
 export function Banner(props: BannerProps)
 {
   return (
-    <Box
-      position={'absolute'}
-      height={'400px'}
-      width={'full'}
-      overflow={'hidden'}>
-      {/* Slider */}
-        <Slider >
-          <Box
-            height={"400px"}
-            position="relative"
-            backgroundPosition="flex"
-            backgroundRepeat="no-repeat"
-            backgroundSize="100%"
-            backgroundImage={props.bg}>
-          </Box>
-        </Slider>
-    </Box>
+    <Flex
+      height={'500px'}
+      overflow={'hidden'}
+      backgroundRepeat="no-repeat"
+      backgroundSize="100%"
+      backgroundImage={props.bg}
+      alignItems="end"
+      ><Text
+        color={"dark.headtext"}
+        fontSize="48"
+      >Europa</Text>
+    </Flex>
   );
 }
