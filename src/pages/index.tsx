@@ -3,6 +3,7 @@ import Head from 'next/head'
 import { useState } from 'react'
 import Navbar_home from '../../components/Navbar_home'
 import Banner from '../../components/Banner'
+
 export default function Home()
 {
   const [texto, setTexto] = useState('')
