@@ -5,6 +5,10 @@ import { Travel_types } from '../../components/Travel_types'
 import Navbar_home from '../../components/Navbar_home'
 import { Banner } from '../../components/Banner_home'
 import { Stack, HStack, VStack } from '@chakra-ui/react'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import "swiper/css/navigation";
+import 'swiper/css/pagination';
 
 export default function Home()
 {
@@ -24,10 +28,24 @@ export default function Home()
       
       <main>
         <Navbar_home/>
-        <Banner bg ={["Banner_mobile.png", "Banner_mobile.png", "Banner.png"]}/>
-        <Flex h={"100vh"} justifyContent="center" alignItems={"center"} bg="white">
-        <Travel_types/>
-        
+        <Banner bg ={["Banner_mobile.png", "Banner_mobile.png", "Banner.png"]} />
+        <Flex 
+          h={"100vh"} 
+          justifyContent="center" 
+          alignItems={"center"} 
+          bg="white" 
+          direction='column'
+        >
+          <Travel_types/>
+          <Swiper
+            navigation
+            pagination={{ clickable: true }}
+          >
+            <SwiperSlide>Slide 1</SwiperSlide>
+            <SwiperSlide>Slide 2</SwiperSlide>
+            <SwiperSlide>Slide 3</SwiperSlide>
+          </Swiper>
+
         </Flex>
       </main>
     </div>
