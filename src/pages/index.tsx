@@ -1,6 +1,7 @@
 import { Box, Flex, Input, Text } from '@chakra-ui/react'
 import Head from 'next/head'
 import { useState } from 'react'
+import { Travel_types } from '../../components/Travel_types'
 import Navbar_home from '../../components/Navbar_home'
 import { Banner } from '../../components/Banner_home'
 import { Stack, HStack, VStack } from '@chakra-ui/react'
@@ -25,36 +26,8 @@ export default function Home()
         <Navbar_home/>
         <Banner bg ={["Banner_mobile.png", "Banner_mobile.png", "Banner.png"]}/>
         <Flex h={"100vh"} justifyContent="center" alignItems={"center"} bg="white">
-        <Stack direction={['column', 'row']} 
-          spacing={['30px', '150px']}
-          pt={10} 
-          fontSize={'xl'}>
-            <Stack>
-              <Text>
-                vida noturna
-              </Text>
-            </Stack>
-            <Stack>
-              <Text>
-                praia
-              </Text>
-            </Stack>
-            <Stack>
-              <Text>
-                moderno
-              </Text>
-            </Stack>
-            <Stack>
-              <Text>
-                clássico
-              </Text>
-            </Stack>
-            <Stack>
-              <Text>
-                e mais...
-              </Text>
-            </Stack>
-          </Stack>
+        <Travel_types/>
+        
         </Flex>
       </main>
     </div>
