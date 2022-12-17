@@ -3,6 +3,8 @@ import Head from 'next/head'
 import { useState } from 'react'
 import Navbar_home from '../../components/Navbar_home'
 import Banner from '../../components/Banner'
+import {Show} from '@chakra-ui/react'
+import Banner_mobile from '../../components/Banner_mobile'
 
 export default function Home()
 {
@@ -20,7 +22,13 @@ export default function Home()
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
       </Head>
       <Navbar_home/>
-      <Banner/>
+      <Show above='sm'>
+      <Banner 
+      background ={["Banner_mobile.png", "Banner.png"]}/>
+      </Show>
+      <Show breakpoint='(max-width: 400px)'>
+      <Banner_mobile/>
+      </Show>
       <main>
         <Flex h={"100vh"} justifyContent="center" alignItems={"center"} bg="white">
         </Flex>

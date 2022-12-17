@@ -1,12 +1,11 @@
 import React from 'react';
 import Slider from 'react-slick';
-import { Show, Hide } from '@chakra-ui/react'
 import
 {
   Box,
 } from '@chakra-ui/react';
 
-export default function Banner()
+export default function Banner_mobile()
 {
   return (
     <Box
@@ -22,7 +21,7 @@ export default function Banner()
             backgroundPosition="flex"
             backgroundRepeat="no-repeat"
             backgroundSize="100%"
-            backgroundImage={bg}>
+            backgroundImage={"Banner_mobile.png"}>
           </Box>
         </Slider>
     </Box>
