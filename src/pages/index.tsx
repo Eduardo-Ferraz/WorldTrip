@@ -2,7 +2,7 @@ import { Box, Flex, Input, Text } from '@chakra-ui/react'
 import Head from 'next/head'
 import { useState } from 'react'
 import Navbar_home from '../../components/Navbar_home'
-import Banner from '../../components/Banner'
+import { Banner } from '../../components/Banner'
 import {Show} from '@chakra-ui/react'
 import Banner_mobile from '../../components/Banner_mobile'
 
@@ -23,8 +23,7 @@ export default function Home()
       </Head>
       <Navbar_home/>
       <Show above='sm'>
-      <Banner 
-      background ={["Banner_mobile.png", "Banner.png"]}/>
+      <Banner bg ={["Banner_mobile.png", "Banner_mobile.png", "Banner.png"]}/>
       </Show>
       <Show breakpoint='(max-width: 400px)'>
       <Banner_mobile/>

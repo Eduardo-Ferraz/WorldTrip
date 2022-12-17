@@ -6,7 +6,12 @@ import
   Box,
 } from '@chakra-ui/react';
 
-export default function Banner()
+
+interface BannerProps {
+  bg: string[]
+}
+
+export function Banner(props: BannerProps)
 {
   return (
     <Box
@@ -22,7 +27,7 @@ export default function Banner()
             backgroundPosition="flex"
             backgroundRepeat="no-repeat"
             backgroundSize="100%"
-            backgroundImage={bg}>
+            backgroundImage={props.bg}>
           </Box>
         </Slider>
     </Box>
