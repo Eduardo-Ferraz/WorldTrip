@@ -57,7 +57,7 @@ export default function Home()
 
       <main>
         <Navbar_home />
-        <Banner bg={["Banner_mobile.png", "Banner_mobile.png", "Banner.png"]} />
+        <Banner bg={["Banner_mobile.png", "Banner.png"]} />
         <Travel_types />
         <Box
         pt={[150,0]}

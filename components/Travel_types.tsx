@@ -4,14 +4,14 @@ import { Image } from '@chakra-ui/react'
 import React from 'react';
 import { Icon, createIcon } from '@chakra-ui/react'
 import { Link } from '@chakra-ui/react'
-const breakpoints = {
-  sm: '30em',
-  md: '48em',
-  lg: '62em',
-  xl: '80em',
-  '2xl': '96em',
+
+type CircleIconProps = {
+    color: string
+    pr: number
+    ml?: string
 }
-const CircleIcon = (props) => (
+
+const CircleIcon = (props: CircleIconProps) => (
     <Icon viewBox='0 0 200 200' {...props}>
         <path
             fill='currentColor'
@@ -38,7 +38,7 @@ export function Travel_types()
                         <Image
                             objectFit='fill'
                             src='/icon_vida_noturna.png'
-                            w={[0, 0, 70]}
+                            w={[0, 70]}
                         />
                         <Text pt={4} as='b' color='dark.headtext'>
                             vida noturna
@@ -48,7 +48,7 @@ export function Travel_types()
                 <Link href='/' isExternal style={{ textDecoration: 'none' }}>
                     <Stack justifyContent="center" alignItems={"center"}>
                         <Image
-                            boxSize={[0, 70, 70]}
+                            boxSize={[0, 70]}
                             objectFit='fill'
                             src='/icon_praia.png'
                         />
@@ -60,7 +60,7 @@ export function Travel_types()
                 <Link href='/' isExternal style={{ textDecoration: 'none' }}>
                     <Stack justifyContent="center" alignItems={"center"}>
                         <Image
-                            boxSize={[0, 70, 70]}
+                            boxSize={[0, 70]}
                             objectFit='fill'
                             src='/icon_moderno.png'
                         />
@@ -72,7 +72,7 @@ export function Travel_types()
                 <Link href='/' isExternal style={{ textDecoration: 'none' }}>
                     <Stack justifyContent="center" alignItems={"center"}>
                         <Image
-                            boxSize={[0, 70, 70]}
+                            boxSize={[0, 70]}
                             objectFit='fill'
                             src='/icon_classico.png'
                         />
@@ -84,7 +84,7 @@ export function Travel_types()
                 <Link href='/' isExternal style={{ textDecoration: 'none' }}>
                     <Stack justifyContent="center" alignItems={"center"}>
                         <Image
-                            boxSize={[0, 70, 70]}
+                            boxSize={[0, 70]}
                             objectFit='fill'
                             src='/icon_mais.png'
                         />
@@ -97,7 +97,7 @@ export function Travel_types()
             </Show>
 
 
-            <Show breakpoint='(max-width: 400px)'>
+            <Show below="sm">
                 <Link href='/' isExternal style={{ textDecoration: 'none' }}>
                     <Stack fontSize={'18'} >
                         <Box pt={4} color='dark.headtext'>
