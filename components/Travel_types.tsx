@@ -31,7 +31,8 @@ export function Travel_types()
         justifyContent="center"
         alignItems="center"
         bg="white"
-        ><Show above='sm'>
+        pb={[0,0]}
+        ><Show above='sm' >
                 <Link href='/' isExternal style={{ textDecoration: 'none' }}>
                     <Stack justifyContent="center" alignItems={"center"} >
                         <Image

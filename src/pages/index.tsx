@@ -1,4 +1,4 @@
-import { Image } from '@chakra-ui/react'
+import { Box, Image } from '@chakra-ui/react'
 import Head from 'next/head'
 import { useEffect, useState } from 'react'
 import { Travel_types } from '../../components/Travel_types'
@@ -16,7 +16,7 @@ SwiperCore.use([Navigation, Pagination])
 
 type IHit = {
   webformatURL: string;
-  likes?: number ;
+  likes?: number;
 }
 
 type IHits = {
@@ -29,17 +29,19 @@ export default function Home()
 {
   const [imagesUrl, setImagesUrl] = useState<IHits | null>();
 
-  useEffect(() => {
-    const getNewPhoto = async () => {
-    const photos = await getPhoto("europa");
-      
-    setImagesUrl(photos)
-    console.log(photos);   
+  useEffect(() =>
+  {
+    const getNewPhoto = async () =>
+    {
+      const photos = await getPhoto("europa");
+
+      setImagesUrl(photos)
+      console.log(photos);
     }
 
     getNewPhoto();
-    
-  },[]);
+
+  }, []);
 
   return (
     <div>
@@ -52,27 +54,33 @@ export default function Home()
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
       </Head>
-      
-      <main>
-        <Navbar_home/>
-        <Banner bg ={["Banner_mobile.png", "Banner_mobile.png", "Banner.png"]} />
-        <Travel_types/>
 
-        <Swiper
+      <main>
+        <Navbar_home />
+        <Banner bg={["Banner_mobile.png", "Banner_mobile.png", "Banner.png"]} />
+        <Travel_types />
+        <Box
+        pt={[150,0]}
+        pb={[0,5]}
+        margin = {[0,10]}
+        >
+          <Swiper
             modules={[Navigation, Pagination]}
             navigation
             pagination={{ clickable: true }}
           >
             <SwiperSlide>
-              <Image src={imagesUrl?.hits[0].webformatURL} /> 
+              <Image src='Slider_Continent_Europa.png' />
             </SwiperSlide>
             <SwiperSlide>
-              <Image src={imagesUrl?.hits[1].webformatURL} /> 
+              <Image src='Slider_Continent_America.png' />
             </SwiperSlide>
             <SwiperSlide>
-              <Image src={imagesUrl?.hits[2].webformatURL} /> {/* A maior imagem define a altura de todo o Swiper*/}
+              <Image src='Slider_Continent_Asia.png' /> {/* A maior imagem define a altura de todo o Swiper*/}
             </SwiperSlide>
           </Swiper>
+        </Box>
+
       </main>
     </div>
   )
