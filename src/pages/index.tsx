@@ -1,18 +1,45 @@
-import { Box, Flex, Input, Text } from '@chakra-ui/react'
+import { Image } from '@chakra-ui/react'
 import Head from 'next/head'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Travel_types } from '../../components/Travel_types'
 import Navbar_home from '../../components/Navbar_home'
 import { Banner } from '../../components/Banner_home'
-import { Stack, HStack, VStack } from '@chakra-ui/react'
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import "swiper/css/navigation";
-import 'swiper/css/pagination';
+import getPhoto from '../services/axios'
+
+import { Swiper, SwiperSlide } from 'swiper/react'
+import SwiperCore, { Navigation, Pagination } from 'swiper'
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
+
+SwiperCore.use([Navigation, Pagination])
+
+type IHit = {
+  webformatURL: string;
+  likes?: number ;
+}
+
+type IHits = {
+  hits: IHit[];
+  total: number;
+  totalHits: number;
+}
 
 export default function Home()
 {
-  const [texto, setTexto] = useState('')
+  const [imagesUrl, setImagesUrl] = useState<IHits | null>();
+
+  useEffect(() => {
+    const getNewPhoto = async () => {
+    const photos = await getPhoto("europa");
+      
+    setImagesUrl(photos)
+    console.log(photos);   
+    }
+
+    getNewPhoto();
+    
+  },[]);
 
   return (
     <div>
@@ -29,24 +56,23 @@ export default function Home()
       <main>
         <Navbar_home/>
         <Banner bg ={["Banner_mobile.png", "Banner_mobile.png", "Banner.png"]} />
-        <Flex 
-          h={"100vh"} 
-          justifyContent="center" 
-          alignItems={"center"} 
-          bg="white" 
-          direction='column'
-        >
-          <Travel_types/>
-          <Swiper
+        <Travel_types/>
+
+        <Swiper
+            modules={[Navigation, Pagination]}
             navigation
             pagination={{ clickable: true }}
           >
-            <SwiperSlide>Slide 1</SwiperSlide>
-            <SwiperSlide>Slide 2</SwiperSlide>
-            <SwiperSlide>Slide 3</SwiperSlide>
+            <SwiperSlide>
+              <Image src={imagesUrl?.hits[0].webformatURL} /> 
+            </SwiperSlide>
+            <SwiperSlide>
+              <Image src={imagesUrl?.hits[1].webformatURL} /> 
+            </SwiperSlide>
+            <SwiperSlide>
+              <Image src={imagesUrl?.hits[2].webformatURL} /> {/* A maior imagem define a altura de todo o Swiper*/}
+            </SwiperSlide>
           </Swiper>
-
-        </Flex>
       </main>
     </div>
   )

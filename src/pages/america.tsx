@@ -1,7 +1,7 @@
 import { Box, Flex, Input, Text } from '@chakra-ui/react'
 import Head from 'next/head'
 import { useState } from 'react'
-import { Banner } from '../../components/Banner';
+import { Banner } from '../../components/Banner'
 import Navbar from '../../components/Navbar'
 
 export default function America()
