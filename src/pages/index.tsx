@@ -82,6 +82,10 @@ export default function Home()
             modules={[Navigation, Pagination]}
             navigation
             pagination={{ clickable: true }}
+            style={{
+              "--swiper-pagination-color": "#FFBA08",
+              "--swiper-navigation-color": "#FFBA08",
+            }}
           >
             <SwiperSlide >
               <Image src='Slider_Continent_Europa.png' w={'100%'} />
