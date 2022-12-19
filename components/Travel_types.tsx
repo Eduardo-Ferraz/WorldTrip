@@ -25,13 +25,12 @@ export function Travel_types()
     return (
         <Stack direction={['column', 'row']}
         spacing={['30px', '150px']}
-        pt={300}
+        pt={[280,300]}
         fontSize='xl'
-        h={['30vh', '100vh']}
+        h={['30vh', '90vh']}
         justifyContent="center"
         alignItems="center"
         bg="white"
-        pb={[0,0]}
         ><Show above='sm' >
                 <Link href='/' isExternal style={{ textDecoration: 'none' }}>
                     <Stack justifyContent="center" alignItems={"center"} >
@@ -100,7 +99,7 @@ export function Travel_types()
             <Show below="sm">
                 <Link href='/' isExternal style={{ textDecoration: 'none' }}>
                     <Stack fontSize={'18'} >
-                        <Box pt={4} color='dark.headtext'>
+                        <Box color='dark.headtext'>
                             <CircleIcon color='highlight' pr={2} />vida noturna
                             <CircleIcon color='highlight' pr={2} ml={'16'} />praia
                         </Box>
@@ -108,14 +107,14 @@ export function Travel_types()
                 </Link>
                 <Link href='/' isExternal style={{ textDecoration: 'none' }}>
                     <Stack justifyContent="center" alignItems={"center"} fontSize={'18'}>
-                        <Text pt={4} color='dark.headtext' >
+                        <Text  color='dark.headtext' >
                             <CircleIcon color='highlight' pr={2} />moderno
                             <CircleIcon color='highlight' pr={2} ml={'16'} />clássico
                         </Text>
                     </Stack>
                 </Link>
                 <Link href='/' isExternal style={{ textDecoration: 'none' }}> <Stack justifyContent="center" alignItems={"center"} fontSize={'18'}>
-                    <Text pt={4} color='dark.headtext' >
+                    <Text color='dark.headtext' >
                         <CircleIcon color='highlight' pr={2} />  e mais...
                     </Text>
                 </Stack>

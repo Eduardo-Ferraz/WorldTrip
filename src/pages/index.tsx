@@ -1,4 +1,4 @@
-import { Box, Image } from '@chakra-ui/react'
+import { Box, Image, Text, Stack } from '@chakra-ui/react'
 import Head from 'next/head'
 import { useEffect, useState } from 'react'
 import { Travel_types } from '../../components/Travel_types'
@@ -59,24 +59,38 @@ export default function Home()
         <Navbar_home />
         <Banner bg={["Banner_mobile.png", "Banner.png"]} />
         <Travel_types />
+        <Stack justifyContent="center"
+          alignItems="center"
+          pt={['13vh', '5']}
+          color={"dark.headtext"}
+          fontSize={['20', '36']}
+          >
+             <Image src='Divider.png' w={['', '20']}/>
+          <Text
+          >Vamos nessa?
+          </Text>
+          <Text
+          >Então escolha seu continente
+          </Text>
+        </Stack>
         <Box
-        pt={[150,0]}
-        pb={[0,5]}
-        margin = {[0,10]}
+          pt={[5, 0]}
+          pb={[0, 5]}
+          margin={[0, 10]}
         >
           <Swiper
             modules={[Navigation, Pagination]}
             navigation
             pagination={{ clickable: true }}
           >
-            <SwiperSlide>
+            <SwiperSlide >
               <Image src='Slider_Continent_Europa.png' />
             </SwiperSlide>
             <SwiperSlide>
               <Image src='Slider_Continent_America.png' />
             </SwiperSlide>
             <SwiperSlide>
-              <Image src='Slider_Continent_Asia.png' /> {/* A maior imagem define a altura de todo o Swiper*/}
+              <Image src='Slider_Continent_Asia.png'/> {/* A maior imagem define a altura de todo o Swiper*/}
             </SwiperSlide>
           </Swiper>
         </Box>
