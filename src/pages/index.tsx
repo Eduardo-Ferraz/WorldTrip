@@ -84,13 +84,13 @@ export default function Home()
             pagination={{ clickable: true }}
           >
             <SwiperSlide >
-              <Image src='Slider_Continent_Europa.png' />
+              <Image src='Slider_Continent_Europa.png' w={'100%'} />
             </SwiperSlide>
             <SwiperSlide>
-              <Image src='Slider_Continent_America.png' />
+              <Image src='Slider_Continent_America.png'  w={'100%'}/>
             </SwiperSlide>
             <SwiperSlide>
-              <Image src='Slider_Continent_Asia.png'/> {/* A maior imagem define a altura de todo o Swiper*/}
+              <Image src='Slider_Continent_Asia.png'  w={'100%'} /> {/* A maior imagem define a altura de todo o Swiper*/}
             </SwiperSlide>
           </Swiper>
         </Box>
