@@ -20,7 +20,7 @@ export default function America()
       </Head>
       <main>
         <Navbar />
-        <Banner bg="Europa.png" />
+        <Banner bg="Europa.png" text = "Europa"/>
         <Flex justifyContent="center" alignItems={"center"} bg="white">
           <Stack direction={'row'}
             justifyContent="center"

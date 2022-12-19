@@ -1,5 +1,4 @@
 import React from 'react';
-import Slider from 'react-slick';
 import { Show, Hide } from '@chakra-ui/react'
 import
 {
@@ -12,6 +11,7 @@ import
 interface BannerProps
 {
   bg: string
+  text: string
 }
 
 export function Banner(props: BannerProps)
@@ -29,7 +29,7 @@ export function Banner(props: BannerProps)
       fontSize={['30px', '48px']}
       as='b'
       mt={['0', '32']}
-    >Europa</Text>
+    >{props.text}</Text>
     </Flex>
   );
 }
