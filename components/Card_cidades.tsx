@@ -27,20 +27,20 @@ interface CardProps
 export function Card_cidades(props: CardProps)
 {
     return (
-        <Card maxW={['300', 's200']} border='1px' borderRadius='lg' borderColor='highlight50'>
+        <Card  maxH={['280', '300']} border='1px' borderRadius='lg' borderColor='highlight50'>
             <Image src={props.bg}
-                h={['30%', '150']}
+                h={['60%', '150']}
                 borderRadius='4'
             />
             <CardBody>
                 <Stack >
-                    <Stack spacing={['30%', '20%']} direction={'row'}>
-                        <Heading pt={4} size='xl'>{props.title}</Heading>
-                        <Stack pt={6}>
-                            <Avatar src={props.flag} />
+                    <Stack spacing={['40%', '30%']} direction={'row'}>
+                        <Heading  fontSize={'20px'} >{props.title}</Heading>
+                        <Stack>
+                            <Avatar src={props.flag}/>
                         </Stack>
                     </Stack>
-                    <Text color='dark.info' fontSize='2xl'>
+                    <Text  color='dark.info' fontSize={'16px'}>
                         {props.text}
                     </Text>
                 </Stack>
