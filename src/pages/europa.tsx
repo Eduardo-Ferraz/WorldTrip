@@ -21,21 +21,21 @@ export default function America()
       <main>
         <Navbar />
         <Banner bg="Europa.png" text = "Europa"/>
-        <Flex justifyContent="center" alignItems={"center"} bg="white">
+        <Flex h ={80} justifyContent="center" alignItems={"center"} bg="white">
           <Stack direction={'row'}
             justifyContent="center"
             alignItems="center"
             spacing={'45px'}
           >
             <Show above='sm'>
-              <Text justifyContent="space-between" color='dark.headtext' w={'600px'} fontSize='24'>
+              <Text mt = {'10%'}pr= {12} color='dark.headtext' w={'600px'} fontSize='24'>
                 A Europa é, por convenção, um dos seis continentes do
                 mundo. Compreendendo a península ocidental da Eurásia,
                 a Europa geralmente divide-se da Ásia a leste pela
                 divisória de águas dos montes Urais, o rio Ural, o
                 mar Cáspio, o Cáucaso, e o mar Negro a sudeste
               </Text>
-              <Stack justifyContent="center" alignItems={"center"} >
+              <Stack justifyContent="center" alignItems={"center"}  mt={10}>
                 <Text as='b' color='highlight50' fontSize='48'>
                   50
                 </Text>
@@ -68,7 +68,7 @@ export default function America()
           >
 
             <Show below='sm'>
-              <Text justifyContent="space-between" color='dark.headtext' w={'340px'} fontSize='14'>
+              <Text  justifyContent="space-between" color='dark.headtext' w={'300px'} fontSize='14' pb={30}>
                 A Europa é, por convenção, um dos seis continentes do
                 mundo. Compreendendo a península ocidental da Eurásia,
                 a Europa geralmente divide-se da Ásia a leste pela
@@ -103,7 +103,7 @@ export default function America()
               </Stack>
             </Show>
           </Stack>
-          <Image m={1} src='/icon_Info.png' w={[3, 4]} pt={[52, 80]} />
+          <Image m={1} src='/icon_Info.png' w={[3, 4]} pt={[240, 20]} />
         </Flex>
       </main>
     </div>
