@@ -3,6 +3,7 @@ import Head from 'next/head'
 import { useState } from 'react'
 import { Banner } from '../../components/Banner'
 import Navbar from '../../components/Navbar'
+import { Card_cidades } from '../../components/Card_cidades'
 
 export default function America()
 {
@@ -20,22 +21,22 @@ export default function America()
       </Head>
       <main>
         <Navbar />
-        <Banner bg="Europa.png" text = "Europa"/>
-        <Flex h ={80} justifyContent="center" alignItems={"center"} bg="white">
+        <Banner bg="Europa.png" text="Europa" />
+        <Flex h={80} justifyContent="center" alignItems={"center"} bg="white">
           <Stack direction={'row'}
             justifyContent="center"
             alignItems="center"
             spacing={'45px'}
           >
             <Show above='sm'>
-              <Text mt = {'10%'}pr= {12} color='dark.headtext' w={'600px'} fontSize='24'>
+              <Text mt={'10%'} pr={12} color='dark.headtext' w={'600px'} fontSize='24'>
                 A Europa é, por convenção, um dos seis continentes do
                 mundo. Compreendendo a península ocidental da Eurásia,
                 a Europa geralmente divide-se da Ásia a leste pela
                 divisória de águas dos montes Urais, o rio Ural, o
                 mar Cáspio, o Cáucaso, e o mar Negro a sudeste
               </Text>
-              <Stack justifyContent="center" alignItems={"center"}  mt={10}>
+              <Stack justifyContent="center" alignItems={"center"} mt={10}>
                 <Text as='b' color='highlight50' fontSize='48'>
                   50
                 </Text>
@@ -68,7 +69,7 @@ export default function America()
           >
 
             <Show below='sm'>
-              <Text  justifyContent="space-between" color='dark.headtext' w={'300px'} fontSize='14' pb={30}>
+              <Text justifyContent="space-between" color='dark.headtext' w={'300px'} fontSize='14' pb={30}>
                 A Europa é, por convenção, um dos seis continentes do
                 mundo. Compreendendo a península ocidental da Eurásia,
                 a Europa geralmente divide-se da Ásia a leste pela
@@ -105,6 +106,12 @@ export default function America()
           </Stack>
           <Image m={1} src='/icon_Info.png' w={[3, 4]} pt={[240, 20]} />
         </Flex>
+        <Flex h={600} justifyContent="center" alignItems={"center"}>
+          <Stack pb= {30} direction={['column', 'row']}>
+            <Card_cidades bg='Europa.png'text='Reino Unido' title='Londres' />
+          </Stack>
+        </Flex>
+
       </main>
     </div>
   )
