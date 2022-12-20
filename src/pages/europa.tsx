@@ -1,13 +1,50 @@
 import { Box, Flex, Input, Text, Stack, Show, Image } from '@chakra-ui/react'
 import Head from 'next/head'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Banner } from '../../components/Banner'
 import Navbar from '../../components/Navbar'
 import { Card_cidades } from '../../components/Card_cidades'
+import getPhoto from '../services/axios'
+
+type IHit = {
+  webformatURL: string;
+  likes?: number ;
+}
+
+type IHits = {
+  hits: IHit[];
+  total: number;
+  totalHits: number;
+}
 
 export default function America()
 {
   const [texto, setTexto] = useState('');
+  const [imagesUrl, setImagesUrl] = useState<IHits[] | null>();
+
+  useEffect(() =>
+  {
+    const getNewPhoto = async (pesquisa: string[]) =>
+    {
+      let imageTemp;
+      const photos: IHits[] = [];
+
+      for(let i = 0; i < pesquisa.length; i++){
+        imageTemp = await getPhoto(pesquisa[i]);
+        if(imageTemp!==null){
+          photos.push(imageTemp);
+        }// VERIFICAR SE FOR NULL, SETAR UMA IMAGEM PADRÃO
+      }
+
+      setImagesUrl(photos)
+      console.log(photos);
+    }
+
+    getNewPhoto(["london sightseeing"]);
+
+  }, []);
+
+  
   return (
     <div>
       <Head>
@@ -108,7 +145,9 @@ export default function America()
         </Flex>
         <Flex h={600} justifyContent="center" alignItems={"center"}>
           <Stack pb= {30} direction={['column', 'row']}>
-            <Card_cidades flag ='https://bit.ly/sage-adebayo' bg='Europa.png'text='Reino Unido' title='Londres' />
+          { imagesUrl !== null && imagesUrl !== undefined &&( 
+              <><Card_cidades bg={imagesUrl[0].hits[Math.floor(Math.random() * imagesUrl[0].hits.length)].webformatURL} text='Reino Unido' title='Londres' flag ='https://bit.ly/sage-adebayo'/></>
+            )}
           </Stack>
         </Flex>
       </main>
