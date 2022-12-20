@@ -48,7 +48,7 @@ export default function Home()
       console.log(photos);
     }
 
-    getNewPhoto(["europe","america","asia"]);
+    getNewPhoto(["europe sightseeing","america sightseeing","asia sightseeing"]);
 
   }, []);
 
