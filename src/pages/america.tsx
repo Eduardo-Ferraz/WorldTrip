@@ -16,21 +16,18 @@ type IHits = {
 }
 
 export default function Europa(){
-  const [texto, setTexto] = useState<string>("")
   const [imagesUrl, setImagesUrl] = useState<IHits | null>();
-  const [ count, setCount ] = useState(0);
-
-  
 
   useEffect(() => {
-    const getNewPhoto = async () => {
-    const photos = await getPhoto("europa");
+    const getNewPhoto = async (pesquisa: string) => {
+    const photos = await getPhoto(pesquisa);
       
-    setImagesUrl(photos)
-    console.log(photos);   
+    setImagesUrl(photos);
+    console.log(photos);
+    console.log(imagesUrl?.totalHits);
     }
 
-    getNewPhoto();
+    getNewPhoto("europe");
     
   },[]);
 
@@ -53,10 +50,8 @@ export default function Europa(){
         justify="center" 
         align="center" 
         bg={["white"]}>
-          <Text >{imagesUrl?.hits[2].likes}</Text>
-          <Image src={imagesUrl?.hits[count].webformatURL} />
             { imagesUrl !== null && imagesUrl !== undefined &&( 
-              <><Image src={imagesUrl.hits[0].webformatURL} /><Text>{imagesUrl?.total} Nao eh</Text></>
+              <><Image src={imagesUrl.hits[Math.floor(Math.random() * imagesUrl.hits.length)].webformatURL} /></>
             )}
         </Flex>
        

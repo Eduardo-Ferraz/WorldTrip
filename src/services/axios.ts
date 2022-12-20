@@ -22,7 +22,9 @@ async function getPhoto(continente: string){
     'key':'32109703-e24e76e2a55db4499708d50ee',
     'q': continente,
     'safesearch':true,
-    'image_type':'photo'
+    'image_type':'photo',
+    'min_height':450,
+    'min_width':240
 
     }})
 

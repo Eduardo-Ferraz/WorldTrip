@@ -25,21 +25,30 @@ type IHits = {
   totalHits: number;
 }
 
+
 export default function Home()
 {
-  const [imagesUrl, setImagesUrl] = useState<IHits | null>();
+  const [imagesUrl, setImagesUrl] = useState<IHits[] | null>();
 
   useEffect(() =>
   {
-    const getNewPhoto = async () =>
+    const getNewPhoto = async (pesquisa: string[]) =>
     {
-      const photos = await getPhoto("europa");
+      let imageTemp;
+      const photos: IHits[] = [];
+
+      for(let i = 0; i < pesquisa.length; i++){
+        imageTemp = await getPhoto(pesquisa[i]);
+        if(imageTemp!==null){
+          photos.push(imageTemp);
+        }// VERIFICAR SE FOR NULL, SETAR UMA IMAGEM PADRÃO
+      }
 
       setImagesUrl(photos)
       console.log(photos);
     }
 
-    getNewPhoto();
+    getNewPhoto(["europe","america","asia"]);
 
   }, []);
 
@@ -88,13 +97,20 @@ export default function Home()
             }}
           >
             <SwiperSlide >
-              <Image src='Slider_Continent_Europa.png' w={'100%'} />
+              { imagesUrl !== null && imagesUrl !== undefined &&( 
+              <><Image src={imagesUrl[0].hits[Math.floor(Math.random() * imagesUrl[0].hits.length)].webformatURL} h={["30vh","60vh"]} w={'100%'} /></>
+            )}
+
             </SwiperSlide>
             <SwiperSlide>
-              <Image src='Slider_Continent_America.png'  w={'100%'}/>
+            { imagesUrl !== null && imagesUrl !== undefined &&( 
+              <><Image src={imagesUrl[1].hits[Math.floor(Math.random() * imagesUrl[1].hits.length)].webformatURL} h={["30vh","60vh"]} w={'100%'} /></>
+            )}
             </SwiperSlide>
             <SwiperSlide>
-              <Image src='Slider_Continent_Asia.png'  w={'100%'} /> {/* A maior imagem define a altura de todo o Swiper*/}
+            { imagesUrl !== null && imagesUrl !== undefined &&( 
+              <><Image src={imagesUrl[2].hits[Math.floor(Math.random() * imagesUrl[2].hits.length)].webformatURL} h={["30vh","60vh"]} w={'100%'} /></>
+            )} {/* A maior imagem define a altura de todo o Swiper*/}
             </SwiperSlide>
           </Swiper>
         </Box>
