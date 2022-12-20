@@ -108,10 +108,9 @@ export default function America()
         </Flex>
         <Flex h={600} justifyContent="center" alignItems={"center"}>
           <Stack pb= {30} direction={['column', 'row']}>
-            <Card_cidades bg='Europa.png'text='Reino Unido' title='Londres' />
+            <Card_cidades flag ='https://bit.ly/sage-adebayo' bg='Europa.png'text='Reino Unido' title='Londres' />
           </Stack>
         </Flex>
-
       </main>
     </div>
   )
