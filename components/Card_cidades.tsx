@@ -18,16 +18,16 @@ import React from 'react';
 
 interface CardProps
 {
-    bg: string
-    flag: string
     title: string
     text: string
+    bg: string
+    flag: string
 }
 
 export function Card_cidades(props: CardProps)
 {
     return (
-        <Card maxW={['300', 's200']} border='1px' borderRadius='lg' borderColor='rgba(255, 186, 8, 0.5)'>
+        <Card maxW={['300', 's200']} border='1px' borderRadius='lg' borderColor='highlight50'>
             <Image src={props.bg}
                 h={['30%', '150']}
                 borderRadius='4'
@@ -37,7 +37,7 @@ export function Card_cidades(props: CardProps)
                     <Stack spacing={['30%', '20%']} direction={'row'}>
                         <Heading pt={4} size='xl'>{props.title}</Heading>
                         <Stack pt={6}>
-                            <Avatar src={props.title} />
+                            <Avatar src={props.flag} />
                         </Stack>
                     </Stack>
                     <Text color='dark.info' fontSize='2xl'>

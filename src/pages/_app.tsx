@@ -8,12 +8,12 @@ const theme = extendTheme({
   },
   colors: {
     highlight: "#FFBA08",
-    highlight50: "#FFBA08", // Como podemos botar o 50% em HEX ???
+    highlight50: "rgba(255, 186, 8, 0.5)", // Como podemos botar o 50% em HEX ???
     dark: {
       black: "#000000",
       headtext: "#47585B",
       info: "#999999",
-      info50: "#999999", // Como podemos botar o 50% em HEX ???
+      info50: "rgba(153, 153, 153, 0.5)", // Como podemos botar o 50% em HEX ???
     },
     light: {
       white: "#FFFFFF",

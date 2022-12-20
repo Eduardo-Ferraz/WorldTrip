@@ -1,4 +1,4 @@
-import { Box, Flex, Input, Text, Stack, Show, Image } from '@chakra-ui/react'
+import { Flex, Text, Stack, Show, Image, Grid } from '@chakra-ui/react'
 import Head from 'next/head'
 import { useEffect, useState } from 'react'
 import { Banner } from '../../components/Banner'
@@ -19,7 +19,6 @@ type IHits = {
 
 export default function America()
 {
-  const [texto, setTexto] = useState('');
   const [imagesUrl, setImagesUrl] = useState<IHits[] | null>();
 
   useEffect(() =>
@@ -43,7 +42,6 @@ export default function America()
     getNewPhoto(["london sightseeing"]);
 
   }, []);
-
   
   return (
     <div>
@@ -74,7 +72,7 @@ export default function America()
                 mar Cáspio, o Cáucaso, e o mar Negro a sudeste
               </Text>
               <Stack justifyContent="center" alignItems={"center"} mt={10}>
-                <Text as='b' color='highlight50' fontSize='48'>
+                <Text as='b' color='highlight' fontSize='48'>
                   50
                 </Text>
                 <Text as='b' color='dark.headtext'>
@@ -82,7 +80,7 @@ export default function America()
                 </Text>
               </Stack>
               <Stack justifyContent="center" alignItems={"center"} >
-                <Text as='b' color='highlight50' fontSize='48'>
+                <Text as='b' color='highlight' fontSize='48'>
                   60
                 </Text>
                 <Text as='b' color='dark.headtext'>
@@ -90,12 +88,12 @@ export default function America()
                 </Text>
               </Stack>
               <Stack justifyContent="center" alignItems={"center"} >
-                <Text as='b' color='highlight50' fontSize='48'>
+                <Text as='b' color='highlight' fontSize='48'>
                   27
                 </Text>
                 <Text as='b' color='dark.headtext'>
-                  cidades +100
-                </Text>
+                    cidades +100
+                  </Text>
               </Stack>
             </Show>
           </Stack>
@@ -115,7 +113,7 @@ export default function America()
               </Text>
               <Stack direction={'row'} spacing={'40px'}>
                 <Stack justifyContent="center" alignItems={"center"} >
-                  <Text as='b' color='highlight50' fontSize='32'>
+                  <Text as='b' color='highlight' fontSize='32'>
                     50
                   </Text>
                   <Text color='dark.headtext'>
@@ -123,7 +121,7 @@ export default function America()
                   </Text>
                 </Stack>
                 <Stack justifyContent="center" alignItems={"center"} >
-                  <Text as='b' color='highlight50' fontSize='32'>
+                  <Text as='b' color='highlight' fontSize='32'>
                     60
                   </Text>
                   <Text color='dark.headtext'>
@@ -131,7 +129,7 @@ export default function America()
                   </Text>
                 </Stack>
                 <Stack justifyContent="center" alignItems={"center"} >
-                  <Text as='b' color='highlight50' fontSize='32'>
+                  <Text as='b' color='highlight' fontSize='32'>
                     27
                   </Text>
                   <Text color='dark.headtext' >
@@ -143,13 +141,45 @@ export default function America()
           </Stack>
           <Image m={1} src='/icon_Info.png' w={[3, 4]} pt={[240, 20]} />
         </Flex>
-        <Flex h={600} justifyContent="center" alignItems={"center"}>
-          <Stack pb= {30} direction={['column', 'row']}>
-          { imagesUrl !== null && imagesUrl !== undefined &&( 
-              <><Card_cidades bg={imagesUrl[0].hits[Math.floor(Math.random() * imagesUrl[0].hits.length)].webformatURL} text='Reino Unido' title='Londres' flag ='https://bit.ly/sage-adebayo'/></>
-            )}
-          </Stack>
-        </Flex>
+        
+        <Text color='dark.headtext' fontSize='36'  ml='10%' mt='5%' mb='5%'>Cidades +100</Text>
+
+        {imagesUrl !== null && imagesUrl !== undefined &&( 
+          <>
+            <Grid templateColumns={['repeat(1, 1fr)', 'repeat(2, 1fr)', 'repeat(3, 1fr)', 'repeat(4, 1fr)']} gap={6} ml='10%' mr='10%'>
+              <Card_cidades 
+                bg={imagesUrl[0].hits[Math.floor(Math.random() * imagesUrl[0].hits.length)].webformatURL}
+                title='Londres' 
+                text='Reino Unido' 
+                flag ='https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/United-kingdom_flag_icon_round.svg/2048px-United-kingdom_flag_icon_round.svg.png'
+              />
+              <Card_cidades 
+                bg={imagesUrl[0].hits[Math.floor(Math.random() * imagesUrl[0].hits.length)].webformatURL} 
+                title='Paris' 
+                text='França' 
+                flag ='https://cdn-icons-png.flaticon.com/512/197/197560.png'
+              />
+              <Card_cidades 
+                bg={imagesUrl[0].hits[Math.floor(Math.random() * imagesUrl[0].hits.length)].webformatURL} 
+                title='Roma' 
+                text='Itália' 
+                flag ='https://media.istockphoto.com/id/690489086/vector/italian-flag.jpg?s=612x612&w=0&k=20&c=kWZWChm94M--bl4uZgmY-tt-OuJQUvt1ujDp0OWSDp8='
+              />
+              <Card_cidades 
+                bg={imagesUrl[0].hits[Math.floor(Math.random() * imagesUrl[0].hits.length)].webformatURL} 
+                title='Praga' 
+                text='República Tcheca' 
+                flag ='https://media.istockphoto.com/id/894491752/vector/czech-republic-flag-vector-round-flat-icon.jpg?s=170667a&w=0&k=20&c=VaFj9bAOkeNKoL4IHPqVAKg-WR9X5zU91HoiBYQfrDg='
+              />
+              <Card_cidades 
+                bg={imagesUrl[0].hits[Math.floor(Math.random() * imagesUrl[0].hits.length)].webformatURL} 
+                title='Amsterdã' 
+                text='Holanda' 
+                flag ='https://cdn-icons-png.flaticon.com/512/323/323275.png'
+              />
+            </Grid>
+          </>
+        )}
       </main>
     </div>
   )
