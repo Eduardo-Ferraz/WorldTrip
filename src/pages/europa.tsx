@@ -8,7 +8,7 @@ import getPhoto from '../services/axios'
 
 type IHit = {
   webformatURL: string;
-  likes?: number ;
+  likes?: number;
 }
 
 type IHits = {
@@ -17,7 +17,7 @@ type IHits = {
   totalHits: number;
 }
 
-export default function America()
+export default function Europa()
 {
   const [imagesUrl, setImagesUrl] = useState<IHits[] | null>();
 

@@ -33,8 +33,8 @@ export function Card_cidades(props: CardProps)
             />
             <CardBody>
                 <Stack >
-                    <Stack spacing={['40%', '30%']} direction={'row'}>
-                        <Heading  fontSize={'20px'} >{props.title}</Heading>
+                    <Stack spacing={['40%', '5%']} direction={'row'}>
+                        <Heading  fontSize={'19px'} >{props.title}</Heading>
                         <Stack>
                             <Avatar src={props.flag}/>
                         </Stack>
