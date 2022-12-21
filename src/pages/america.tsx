@@ -57,7 +57,6 @@ export default function America(){
               América é o segundo maior continente em área, localizado no hemisfério ocidental e que se
               estende, no sentido norte-sul, desde o oceano Ártico até o cabo Horn, ao longo de cerca de
               15 mil quilômetros
-
               </Text>
               <Stack justifyContent="center" alignItems={"center"} >
                 <Text as='b' color='highlight50' fontSize='48'>
@@ -93,9 +92,9 @@ export default function America(){
 
             <Show below='sm'>
               <Text justifyContent="space-between" color='dark.headtext' w={'340px'} fontSize='14'>
-                América é o segundo maior continente em área, localizado no hemisfério ocidental e que se
-                estende, no sentido norte-sul, desde o oceano Ártico até o cabo Horn, ao longo de cerca de
-                15 mil quilômetros
+              América é o segundo maior continente em área, localizado no hemisfério ocidental e que se
+              estende, no sentido norte-sul, desde o oceano Ártico até o cabo Horn, ao longo de cerca de
+              15 mil quilômetros
               </Text>
               <Stack direction={'row'} spacing={'40px'}>
                 <Stack justifyContent="center" alignItems={"center"} >
