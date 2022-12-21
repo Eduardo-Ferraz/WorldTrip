@@ -1,57 +1,12 @@
-import { Box, Image, Text, Stack, VStack, Flex, Link} from '@chakra-ui/react'
+import { Image, Text, Stack } from '@chakra-ui/react'
 import Head from 'next/head'
-import { useEffect, useState } from 'react'
-import { Travel_types } from '../../components/Travel_types'
-import Navbar_home from '../../components/Navbar_home'
-import { Banner } from '../../components/Banner_home'
-import getPhoto from '../services/axios'
-
-import { Swiper, SwiperSlide } from 'swiper/react'
-import SwiperCore, { Navigation, Pagination } from 'swiper'
-import 'swiper/css'
-import 'swiper/css/navigation'
-import 'swiper/css/pagination'
-
-SwiperCore.use([Navigation, Pagination])
-
-type IHit = {
-  webformatURL: string;
-  likes?: number;
-}
-
-type IHits = {
-  hits: IHit[];
-  total: number;
-  totalHits: number;
-}
-
+import { Travel_types } from '../components/Travel_types'
+import Navbar_home from '../components/Navbar_home'
+import { Banner } from '../components/Banner_home'
+import Swiper_home from '../components/Swiper_home'
 
 export default function Home()
 {
-  const [imagesUrl, setImagesUrl] = useState<IHits[] | null>();
-
-  useEffect(() =>
-  {
-    const getNewPhoto = async (pesquisa: string[]) =>
-    {
-      let imageTemp;
-      const photos: IHits[] = [];
-
-      for(let i = 0; i < pesquisa.length; i++){
-        imageTemp = await getPhoto(pesquisa[i]);
-        if(imageTemp!==null){
-          photos.push(imageTemp);
-        }// VERIFICAR SE FOR NULL, SETAR UMA IMAGEM PADRÃO
-      }
-
-      setImagesUrl(photos)
-      console.log(photos);
-    }
-
-    getNewPhoto(["europe sightseeing","america sightseeing","asia sightseeing"]);
-
-  }, []);
-
   return (
     <div>
       <Head>
@@ -68,164 +23,19 @@ export default function Home()
         <Navbar_home />
         <Banner bg={["Banner_mobile.png", "Banner.png"]} />
         <Travel_types />
+
         <Stack justifyContent="center"
           alignItems="center"
           pt={['13vh', '5']}
           color={"dark.headtext"}
           fontSize={['20', '36']}
           >
-             <Image src='Divider.png' w={['', '20']}/>
-          <Text
-          >Vamos nessa?
-          </Text>
-          <Text
-          >Então escolha seu continente
-          </Text>
+          <Image src='Divider.png' w={['', '20']}/>
+          <Text>Vamos nessa?</Text>
+          <Text>Então escolha seu continente</Text>
         </Stack>
-        <Box
-          pt={[5, 0]}
-          pb={[0, 5]}
-          margin={[0, 10]}
-        >
-          <Swiper
-            modules={[Navigation, Pagination]}
-            navigation={true}
-            pagination={{ clickable: true }}
-            style={{
-              "--swiper-pagination-color": "#FFBA08",
-              "--swiper-navigation-color": "#FFBA08",
-            }}
-          >
-            <>
-              <SwiperSlide>
-                <Link  href='/europa'>
-                  { imagesUrl !== null && imagesUrl !== undefined &&( 
-                    <>
-                      <Flex
-                        w={'full'}
-                        h={'60vh'}
-                        bgImage={
-                          imagesUrl[0].hits[Math.floor(Math.random() * imagesUrl[0].hits.length)].webformatURL
-                        }
-                        backgroundSize={'cover'}
-                        backgroundPosition={'center center'}>
-                        <VStack
-                          w={'full'}
-                          justify={'center'}
-                          px={'6'}
-                          bgGradient={'linear(to-r, blackAlpha.600, transparent)'}>
-                          
-                          <Stack maxW={'2xl'} align='center' spacing={6}>
-                            <Text
-                              color='light.headtext'
-                              fontWeight={700}
-                              lineHeight={1.2}
-                              as='b'
-                              fontSize={['3xl', '4xl']}>
-                              Europa
-                            </Text>
-                            <Text
-                              color='light.info'
-                              fontWeight={700}
-                              lineHeight={1.2}
-                              as='b'
-                              fontSize={['1xl', '2xl']}>
-                              O continente mais antigo.
-                            </Text>
-                          </Stack>
-                        </VStack>
-                      </Flex>
-                    </>
-                  )}
-                </Link>
-              </SwiperSlide>
-              <SwiperSlide>
-                <Link  href='/america'>
-                  { imagesUrl !== null && imagesUrl !== undefined &&( 
-                    <>
-                      <Flex
-                        w={'full'}
-                        h={'60vh'}
-                        bgImage={
-                          imagesUrl[1].hits[Math.floor(Math.random() * imagesUrl[1].hits.length)].webformatURL
-                        }
-                        backgroundSize={'cover'}
-                        backgroundPosition={'center center'}>
-                        <VStack
-                          w={'full'}
-                          justify={'center'}
-                          px={'6'}
-                          bgGradient={'linear(to-r, blackAlpha.600, transparent)'}>
-                          
-                          <Stack maxW={'2xl'} align='center' spacing={6}>
-                            <Text
-                              color='light.headtext'
-                              fontWeight={700}
-                              lineHeight={1.2}
-                              as='b'
-                              fontSize={['3xl', '4xl']}>
-                              América
-                            </Text>
-                            <Text
-                              color='light.info'
-                              fontWeight={700}
-                              lineHeight={1.2}
-                              as='b'
-                              fontSize={['1xl', '2xl']}>
-                              O "Novo Mundo".
-                            </Text>
-                          </Stack>
-                        </VStack>
-                      </Flex>
-                    </>
-                  )}
-                </Link>
-              </SwiperSlide>
-              <SwiperSlide>
-                <Link  href='/america'>
-                { imagesUrl !== null && imagesUrl !== undefined &&( 
-                  <>
-                    <Flex
-                      w={'full'}
-                      h={'60vh'}
-                      bgImage={
-                        imagesUrl[2].hits[Math.floor(Math.random() * imagesUrl[2].hits.length)].webformatURL
-                      }
-                      backgroundSize={'cover'}
-                      backgroundPosition={'center center'}>
-                      <VStack
-                        w={'full'}
-                        justify={'center'}
-                        px={'6'}
-                        bgGradient={'linear(to-r, blackAlpha.600, transparent)'}>
-                        
-                        <Stack maxW={'2xl'} align='center' spacing={6}>
-                          <Text
-                            color='light.headtext'
-                            fontWeight={700}
-                            lineHeight={1.2}
-                            as='b'
-                            fontSize={['3xl', '4xl']}>
-                            Ásia
-                          </Text>
-                          <Text
-                            color='light.info'
-                            fontWeight={700}
-                            lineHeight={1.2}
-                            as='b'
-                            fontSize={['1xl', '2xl']}>
-                            O maior continente.
-                          </Text>
-                        </Stack>
-                      </VStack>
-                    </Flex>
-                  </>
-                )}
-                </Link>
-              </SwiperSlide>
-            </>
-          </Swiper>
-        </Box>
+
+        <Swiper_home />
       </main>
     </div>
   )

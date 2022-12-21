@@ -1,9 +1,9 @@
 import { Flex, Text, Stack, Show, Image, Grid } from '@chakra-ui/react'
 import Head from 'next/head'
 import { useEffect, useState } from 'react'
-import { Banner } from '../../components/Banner'
-import Navbar from '../../components/Navbar'
-import { Card_cidades } from '../../components/Card_cidades'
+import { Banner } from '../components/Banner'
+import Navbar from '../components/Navbar'
+import { Card_cidades } from '../components/Card_cidades'
 import getPhoto from '../services/axios'
 
 type IHit = {
