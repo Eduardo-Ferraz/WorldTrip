@@ -8,7 +8,6 @@ import
     Text,
     Stack,
     Heading,
-    Divider,
     Avatar,
 
 }

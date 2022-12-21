@@ -39,7 +39,7 @@ export default function America()
       console.log(photos);
     }
 
-    getNewPhoto(["london sightseeing"]);
+    getNewPhoto(["london sightseeing", "paris sightseeing", "rome sightseeing", "prague sightseeing", "amsterdam sightseeing"]);
 
   }, []);
   
@@ -154,25 +154,25 @@ export default function America()
                 flag ='https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/United-kingdom_flag_icon_round.svg/2048px-United-kingdom_flag_icon_round.svg.png'
               />
               <Card_cidades 
-                bg={imagesUrl[0].hits[Math.floor(Math.random() * imagesUrl[0].hits.length)].webformatURL} 
+                bg={imagesUrl[1].hits[Math.floor(Math.random() * imagesUrl[1].hits.length)].webformatURL} 
                 title='Paris' 
                 text='França' 
                 flag ='https://cdn-icons-png.flaticon.com/512/197/197560.png'
               />
               <Card_cidades 
-                bg={imagesUrl[0].hits[Math.floor(Math.random() * imagesUrl[0].hits.length)].webformatURL} 
+                bg={imagesUrl[2].hits[Math.floor(Math.random() * imagesUrl[2].hits.length)].webformatURL} 
                 title='Roma' 
                 text='Itália' 
                 flag ='https://media.istockphoto.com/id/690489086/vector/italian-flag.jpg?s=612x612&w=0&k=20&c=kWZWChm94M--bl4uZgmY-tt-OuJQUvt1ujDp0OWSDp8='
               />
               <Card_cidades 
-                bg={imagesUrl[0].hits[Math.floor(Math.random() * imagesUrl[0].hits.length)].webformatURL} 
+                bg={imagesUrl[3].hits[Math.floor(Math.random() * imagesUrl[3].hits.length)].webformatURL} 
                 title='Praga' 
                 text='República Tcheca' 
                 flag ='https://media.istockphoto.com/id/894491752/vector/czech-republic-flag-vector-round-flat-icon.jpg?s=170667a&w=0&k=20&c=VaFj9bAOkeNKoL4IHPqVAKg-WR9X5zU91HoiBYQfrDg='
               />
               <Card_cidades 
-                bg={imagesUrl[0].hits[Math.floor(Math.random() * imagesUrl[0].hits.length)].webformatURL} 
+                bg={imagesUrl[4].hits[Math.floor(Math.random() * imagesUrl[4].hits.length)].webformatURL} 
                 title='Amsterdã' 
                 text='Holanda' 
                 flag ='https://cdn-icons-png.flaticon.com/512/323/323275.png'
