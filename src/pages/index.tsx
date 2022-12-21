@@ -1,4 +1,4 @@
-import { Box, Image, Text, Stack, VStack, Flex} from '@chakra-ui/react'
+import { Box, Image, Text, Stack, VStack, Flex, Link} from '@chakra-ui/react'
 import Head from 'next/head'
 import { useEffect, useState } from 'react'
 import { Travel_types } from '../../components/Travel_types'
@@ -96,128 +96,134 @@ export default function Home()
               "--swiper-navigation-color": "#FFBA08",
             }}
           >
-          <>
-            <SwiperSlide>
-            { imagesUrl !== null && imagesUrl !== undefined &&( 
-              <>
-                <Flex
-                  w={'full'}
-                  h={'60vh'}
-                  bgImage={
-                    imagesUrl[0].hits[Math.floor(Math.random() * imagesUrl[0].hits.length)].webformatURL
-                  }
-                  backgroundSize={'cover'}
-                  backgroundPosition={'center center'}>
-                  <VStack
-                    w={'full'}
-                    justify={'center'}
-                    px={'6'}
-                    bgGradient={'linear(to-r, blackAlpha.600, transparent)'}>
-                    
-                    <Stack maxW={'2xl'} align='center' spacing={6}>
-                      <Text
-                        color='light.headtext'
-                        fontWeight={700}
-                        lineHeight={1.2}
-                        as='b'
-                        fontSize={['3xl', '4xl']}>
-                        Europa
-                      </Text>
-                      <Text
-                        color='light.info'
-                        fontWeight={700}
-                        lineHeight={1.2}
-                        as='b'
-                        fontSize={['1xl', '2xl']}>
-                        O continente mais antigo.
-                      </Text>
-                    </Stack>
-                  </VStack>
-                </Flex>
-              </>
-            )}
-            </SwiperSlide>
-            <SwiperSlide>
-            { imagesUrl !== null && imagesUrl !== undefined &&( 
-              <>
-                <Flex
-                  w={'full'}
-                  h={'60vh'}
-                  bgImage={
-                    imagesUrl[1].hits[Math.floor(Math.random() * imagesUrl[1].hits.length)].webformatURL
-                  }
-                  backgroundSize={'cover'}
-                  backgroundPosition={'center center'}>
-                  <VStack
-                    w={'full'}
-                    justify={'center'}
-                    px={'6'}
-                    bgGradient={'linear(to-r, blackAlpha.600, transparent)'}>
-                    
-                    <Stack maxW={'2xl'} align='center' spacing={6}>
-                      <Text
-                        color='light.headtext'
-                        fontWeight={700}
-                        lineHeight={1.2}
-                        as='b'
-                        fontSize={['3xl', '4xl']}>
-                        América
-                      </Text>
-                      <Text
-                        color='light.info'
-                        fontWeight={700}
-                        lineHeight={1.2}
-                        as='b'
-                        fontSize={['1xl', '2xl']}>
-                        O "Novo Mundo".
-                      </Text>
-                    </Stack>
-                  </VStack>
-                </Flex>
-              </>
-            )}
-            </SwiperSlide>
-            <SwiperSlide>
-            { imagesUrl !== null && imagesUrl !== undefined &&( 
-              <>
-                <Flex
-                  w={'full'}
-                  h={'60vh'}
-                  bgImage={
-                    imagesUrl[2].hits[Math.floor(Math.random() * imagesUrl[2].hits.length)].webformatURL
-                  }
-                  backgroundSize={'cover'}
-                  backgroundPosition={'center center'}>
-                  <VStack
-                    w={'full'}
-                    justify={'center'}
-                    px={'6'}
-                    bgGradient={'linear(to-r, blackAlpha.600, transparent)'}>
-                    
-                    <Stack maxW={'2xl'} align='center' spacing={6}>
-                      <Text
-                        color='light.headtext'
-                        fontWeight={700}
-                        lineHeight={1.2}
-                        as='b'
-                        fontSize={['3xl', '4xl']}>
-                        Ásia
-                      </Text>
-                      <Text
-                        color='light.info'
-                        fontWeight={700}
-                        lineHeight={1.2}
-                        as='b'
-                        fontSize={['1xl', '2xl']}>
-                        O maior continente.
-                      </Text>
-                    </Stack>
-                  </VStack>
-                </Flex>
-              </>
-            )}
-            </SwiperSlide>
-          </>
+            <>
+              <SwiperSlide>
+                <Link  href='/europa'>
+                  { imagesUrl !== null && imagesUrl !== undefined &&( 
+                    <>
+                      <Flex
+                        w={'full'}
+                        h={'60vh'}
+                        bgImage={
+                          imagesUrl[0].hits[Math.floor(Math.random() * imagesUrl[0].hits.length)].webformatURL
+                        }
+                        backgroundSize={'cover'}
+                        backgroundPosition={'center center'}>
+                        <VStack
+                          w={'full'}
+                          justify={'center'}
+                          px={'6'}
+                          bgGradient={'linear(to-r, blackAlpha.600, transparent)'}>
+                          
+                          <Stack maxW={'2xl'} align='center' spacing={6}>
+                            <Text
+                              color='light.headtext'
+                              fontWeight={700}
+                              lineHeight={1.2}
+                              as='b'
+                              fontSize={['3xl', '4xl']}>
+                              Europa
+                            </Text>
+                            <Text
+                              color='light.info'
+                              fontWeight={700}
+                              lineHeight={1.2}
+                              as='b'
+                              fontSize={['1xl', '2xl']}>
+                              O continente mais antigo.
+                            </Text>
+                          </Stack>
+                        </VStack>
+                      </Flex>
+                    </>
+                  )}
+                </Link>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Link  href='/america'>
+                  { imagesUrl !== null && imagesUrl !== undefined &&( 
+                    <>
+                      <Flex
+                        w={'full'}
+                        h={'60vh'}
+                        bgImage={
+                          imagesUrl[1].hits[Math.floor(Math.random() * imagesUrl[1].hits.length)].webformatURL
+                        }
+                        backgroundSize={'cover'}
+                        backgroundPosition={'center center'}>
+                        <VStack
+                          w={'full'}
+                          justify={'center'}
+                          px={'6'}
+                          bgGradient={'linear(to-r, blackAlpha.600, transparent)'}>
+                          
+                          <Stack maxW={'2xl'} align='center' spacing={6}>
+                            <Text
+                              color='light.headtext'
+                              fontWeight={700}
+                              lineHeight={1.2}
+                              as='b'
+                              fontSize={['3xl', '4xl']}>
+                              América
+                            </Text>
+                            <Text
+                              color='light.info'
+                              fontWeight={700}
+                              lineHeight={1.2}
+                              as='b'
+                              fontSize={['1xl', '2xl']}>
+                              O "Novo Mundo".
+                            </Text>
+                          </Stack>
+                        </VStack>
+                      </Flex>
+                    </>
+                  )}
+                </Link>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Link  href='/america'>
+                { imagesUrl !== null && imagesUrl !== undefined &&( 
+                  <>
+                    <Flex
+                      w={'full'}
+                      h={'60vh'}
+                      bgImage={
+                        imagesUrl[2].hits[Math.floor(Math.random() * imagesUrl[2].hits.length)].webformatURL
+                      }
+                      backgroundSize={'cover'}
+                      backgroundPosition={'center center'}>
+                      <VStack
+                        w={'full'}
+                        justify={'center'}
+                        px={'6'}
+                        bgGradient={'linear(to-r, blackAlpha.600, transparent)'}>
+                        
+                        <Stack maxW={'2xl'} align='center' spacing={6}>
+                          <Text
+                            color='light.headtext'
+                            fontWeight={700}
+                            lineHeight={1.2}
+                            as='b'
+                            fontSize={['3xl', '4xl']}>
+                            Ásia
+                          </Text>
+                          <Text
+                            color='light.info'
+                            fontWeight={700}
+                            lineHeight={1.2}
+                            as='b'
+                            fontSize={['1xl', '2xl']}>
+                            O maior continente.
+                          </Text>
+                        </Stack>
+                      </VStack>
+                    </Flex>
+                  </>
+                )}
+                </Link>
+              </SwiperSlide>
+            </>
           </Swiper>
         </Box>
       </main>
