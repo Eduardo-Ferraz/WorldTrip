@@ -172,7 +172,7 @@ export default function Home()
                               lineHeight={1.2}
                               as='b'
                               fontSize={['1xl', '2xl']}>
-                              O "Novo Mundo".
+                             Um continente de grandes belezas.
                             </Text>
                           </Stack>
                         </VStack>

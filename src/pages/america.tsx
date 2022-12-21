@@ -54,11 +54,9 @@ export default function America(){
           >
             <Show above='sm'>
               <Text justifyContent="space-between" color='dark.headtext' w={'600px'} fontSize='24'>
-              Um continente de grandes belezas:
               América é o segundo maior continente em área, localizado no hemisfério ocidental e que se
               estende, no sentido norte-sul, desde o oceano Ártico até o cabo Horn, ao longo de cerca de
-              15 mil quilômetros.
-
+              15 mil quilômetros
               </Text>
               <Stack justifyContent="center" alignItems={"center"} >
                 <Text as='b' color='highlight50' fontSize='48'>
@@ -70,7 +68,7 @@ export default function America(){
               </Stack>
               <Stack justifyContent="center" alignItems={"center"} >
                 <Text as='b' color='highlight50' fontSize='48'>
-                  1061
+                  34
                 </Text>
                 <Text as='b' color='dark.headtext'>
                   línguas
@@ -94,16 +92,14 @@ export default function America(){
 
             <Show below='sm'>
               <Text justifyContent="space-between" color='dark.headtext' w={'340px'} fontSize='14'>
-                A Europa é, por convenção, um dos seis continentes do
-                mundo. Compreendendo a península ocidental da Eurásia,
-                a Europa geralmente divide-se da Ásia a leste pela
-                divisória de águas dos montes Urais, o rio Ural, o
-                mar Cáspio, o Cáucaso, e o mar Negro a sudeste
+              América é o segundo maior continente em área, localizado no hemisfério ocidental e que se
+              estende, no sentido norte-sul, desde o oceano Ártico até o cabo Horn, ao longo de cerca de
+              15 mil quilômetros
               </Text>
               <Stack direction={'row'} spacing={'40px'}>
                 <Stack justifyContent="center" alignItems={"center"} >
                   <Text as='b' color='highlight50' fontSize='32'>
-                    50
+                    35
                   </Text>
                   <Text color='dark.headtext'>
                     países
@@ -111,7 +107,7 @@ export default function America(){
                 </Stack>
                 <Stack justifyContent="center" alignItems={"center"} >
                   <Text as='b' color='highlight50' fontSize='32'>
-                    60
+                    34
                   </Text>
                   <Text color='dark.headtext'>
                     línguas
@@ -119,7 +115,7 @@ export default function America(){
                 </Stack>
                 <Stack justifyContent="center" alignItems={"center"} >
                   <Text as='b' color='highlight50' fontSize='32'>
-                    27
+                    20
                   </Text>
                   <Text color='dark.headtext' >
                     cidades +100
