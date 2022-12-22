@@ -32,7 +32,7 @@ export default function Europa()
         imageTemp = await getPhoto(pesquisa[i]);
         if(imageTemp!==null){
           photos.push(imageTemp);
-        }// VERIFICAR SE FOR NULL, SETAR UMA IMAGEM PADRÃO
+        }
       }
 
       setImagesUrl(photos)
@@ -56,7 +56,7 @@ export default function Europa()
       </Head>
       <main>
         <Navbar />
-        <Banner bg="Europa.png" text="África" />
+        <Banner bg="Africa.jpg" text="África" />
         <Flex h={80} justifyContent="center" alignItems={"center"} bg="white">
           <Stack direction={'row'}
             justifyContent="center"
@@ -91,7 +91,7 @@ export default function Europa()
                   27
                 </Text>
                 <Text as='b' color='dark.headtext'>
-                  cidades +100
+                  cidades +100 ⓘ
                 </Text>
               </Stack>
             </Show>
@@ -129,16 +129,15 @@ export default function Europa()
                 </Stack>
                 <Stack justifyContent="center" alignItems={"center"} >
                   <Text as='b' color='highlight' fontSize='32'>
-                    27
+                    32
                   </Text>
                   <Text color='dark.headtext' >
-                    cidades +100
+                    cidades +100 ⓘ
                   </Text>
                 </Stack>
               </Stack>
             </Show>
           </Stack>
-          <Image m={1} src='/icon_Info.png' w={[3, 4]} pt={[240, 20]} />
         </Flex>
         
         <Text color='dark.headtext' fontSize='36'  ml='10%' mt='5%' mb='5%'>Cidades +100</Text>
@@ -150,31 +149,31 @@ export default function Europa()
                 bg={imagesUrl[0].hits[Math.floor(Math.random() * imagesUrl[0].hits.length)].webformatURL}
                 title='Cidade do Cabo' 
                 text='África do Sul' 
-                flag ='https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/United-kingdom_flag_icon_round.svg/2048px-United-kingdom_flag_icon_round.svg.png'
+                flag ='https://cdn-icons-png.flaticon.com/512/197/197562.png'
               />
               <Card_cidades 
                 bg={imagesUrl[1].hits[Math.floor(Math.random() * imagesUrl[1].hits.length)].webformatURL} 
                 title='Casablanca' 
                 text='Marrocos' 
-                flag ='https://cdn-icons-png.flaticon.com/512/197/197560.png'
+                flag ='https://cdn-icons-png.flaticon.com/512/197/197551.png'
               />
               <Card_cidades 
                 bg={imagesUrl[2].hits[Math.floor(Math.random() * imagesUrl[2].hits.length)].webformatURL} 
                 title='Alexandria' 
                 text='Egito' 
-                flag ='https://media.istockphoto.com/id/690489086/vector/italian-flag.jpg?s=612x612&w=0&k=20&c=kWZWChm94M--bl4uZgmY-tt-OuJQUvt1ujDp0OWSDp8='
+                flag ='https://cdn-icons-png.flaticon.com/512/197/197558.png'
               />
               <Card_cidades 
                 bg={imagesUrl[3].hits[Math.floor(Math.random() * imagesUrl[3].hits.length)].webformatURL} 
                 title='Luanda' 
                 text='Angola' 
-                flag ='https://media.istockphoto.com/id/894491752/vector/czech-republic-flag-vector-round-flat-icon.jpg?s=170667a&w=0&k=20&c=VaFj9bAOkeNKoL4IHPqVAKg-WR9X5zU91HoiBYQfrDg='
+                flag ='https://img.freepik.com/premium-vector/angola-flat-rounded-flag-icon_97173-386.jpg?w=2000'
               />
               <Card_cidades 
                 bg={imagesUrl[4].hits[Math.floor(Math.random() * imagesUrl[4].hits.length)].webformatURL} 
                 title='Dar es Salaam' 
                 text='Tanzânia' 
-                flag ='https://cdn-icons-png.flaticon.com/512/323/323275.png'
+                flag ='https://cdn-icons-png.flaticon.com/512/197/197634.png'
               />
             </Grid>
           </>
