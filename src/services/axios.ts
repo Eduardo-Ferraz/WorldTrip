@@ -23,7 +23,7 @@ async function getPhoto(continente: string){
     'q': continente,
     'safesearch':true,
     'image_type':'photo',
-    'min_width':2000
+    'min_width':1500
 
     }})
 
