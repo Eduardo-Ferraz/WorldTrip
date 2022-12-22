@@ -1,8 +1,17 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<!-- ABOUT THE PROJECT -->
+## Sobre o projeto
 
-## Getting Started
+Trata-se de uma aplicação com intuito de mostrar ao usuário os continentes e os principais pontos turísticos desse
+continente.
 
-First, run the development server:
+### Feito com
+
+* TypeScript
+* Javascript
+
+## Primeiros passos
+
+Primeiro, execute o servidor de desenvolvimento:
 
 ```bash
 npm run dev
@@ -10,25 +19,23 @@ npm run dev
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra [http://localhost:3000](http://localhost:3000) com seu navegador para ver o resultado.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+### Pre-requisito
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Git, NodeJS e Yarn instalados e atualizados.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Contato
 
-## Learn More
+Eduardo Ferraz - eduardoc.ferraz2@gmail.com
 
-To learn more about Next.js, take a look at the following resources:
+Emilly Lopes - emillylopsneves@gmail.com
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Lucas D. - lucas.nitz@hotmail.com
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Link do site: https://world-trip-six.vercel.app/
 
-## Deploy on Vercel
+<!-- ACKNOWLEDGMENTS -->
+## Agradecimentos
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+* Agradecemos a toda a equipe da CT Junior pela experiência e apoio nesse voo. Em especial, nosso mentor Luiz Eduardo Vedoato e  nossos diretores Alex Oliveira e André Altoé pelo constante apoio, disponibilidade e ensinamentos que nos levaram tão longe em nosso desenvolvimento.
