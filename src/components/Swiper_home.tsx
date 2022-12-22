@@ -58,10 +58,6 @@ export default function Swiper_home()
             modules={[Navigation, Pagination]}
             navigation={true}
             pagination={{ clickable: true }}
-            style={{
-              "--swiper-pagination-color": "#FFBA08",
-              "--swiper-navigation-color": "#FFBA08",
-            }}
           >
             <>
               <SwiperSlide >
