@@ -13,7 +13,7 @@ type IAxiosResponse = {
 
 async function getPhoto(continente: string){
     try {
-      const response = await axios.get<IAxiosResponse>('http://pixabay.com/api/' ,{params: {
+      const response = await axios.get<IAxiosResponse>('https://pixabay.com/api/' ,{params: {
 
     'key':'32109703-e24e76e2a55db4499708d50ee',
     'q': continente,
