@@ -1,4 +1,4 @@
-import { Flex, Text, Stack, Show, Image, Grid } from '@chakra-ui/react'
+import { Flex, Text, Stack, Show, Grid } from '@chakra-ui/react'
 import Head from 'next/head'
 import { useEffect, useState } from 'react'
 import { Banner } from '../components/Banner'
@@ -34,7 +34,7 @@ export default function America()
         if (imageTemp !== null)
         {
           photos.push(imageTemp);
-        }// VERIFICAR SE FOR NULL, SETAR UMA IMAGEM PADRÃO
+        }
       }
 
       setImagesUrl(photos)
@@ -89,10 +89,10 @@ export default function America()
               </Stack>
               <Stack justifyContent="center" alignItems={"center"} >
                 <Text as='b' color='highlight' fontSize='48'>
-                  14
+                  12
                 </Text>
                 <Text as='b' color='dark.headtext'>
-                  cidades +100
+                  cidades +100 ⓘ
                 </Text>
               </Stack>
             </Show>
@@ -131,13 +131,12 @@ export default function America()
                     14
                   </Text>
                   <Text color='dark.headtext' >
-                    cidades +100
+                    cidades +100 ⓘ
                   </Text>
                 </Stack>
               </Stack>
             </Show>
           </Stack>
-          <Image m={1} src='/icon_Info.png' w={[3, 4]} pt={[240, 20]} />
         </Flex>
 
         <Text  color='dark.headtext' fontSize='36' ml='10%' mt='5%' mb='5%'>Cidades +100</Text >
