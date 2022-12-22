@@ -27,7 +27,7 @@ Git, NodeJS e Yarn instalados e atualizados.
 
 ## Contato
 
-Eduardo Ferraz - eduardoc.ferraz2@gmail.com
+Eduardo Ferraz - eduardoc.ferraz2@gmail.com / https://www.linkedin.com/in/eduardo-ferraz1/
 
 Emilly Lopes - emillylopsneves@gmail.com
 
