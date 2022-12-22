@@ -88,7 +88,7 @@ export default function America()
               </Stack>
               <Stack justifyContent="center" alignItems={"center"} >
                 <Text as='b' color='highlight' fontSize='48'>
-                  27
+                  16
                 </Text>
                 <Text as='b' color='dark.headtext'>
                   cidades +100
@@ -112,7 +112,7 @@ export default function America()
               <Stack direction={'row'} spacing={'40px'}>
                 <Stack justifyContent="center" alignItems={"center"} >
                   <Text as='b' color='highlight' fontSize='32'>
-                    50
+                    14
                   </Text>
                   <Text color='dark.headtext'>
                     países
@@ -120,7 +120,7 @@ export default function America()
                 </Stack>
                 <Stack justifyContent="center" alignItems={"center"} >
                   <Text as='b' color='highlight' fontSize='32'>
-                    60
+                    38
                   </Text>
                   <Text color='dark.headtext'>
                     línguas
