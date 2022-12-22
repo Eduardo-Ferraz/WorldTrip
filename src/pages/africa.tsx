@@ -88,7 +88,7 @@ export default function Europa()
               </Stack>
               <Stack justifyContent="center" alignItems={"center"} >
                 <Text as='b' color='highlight' fontSize='48'>
-                  27
+                  9
                 </Text>
                 <Text as='b' color='dark.headtext'>
                   cidades +100 ⓘ
@@ -104,11 +104,10 @@ export default function Europa()
 
             <Show below='sm'>
               <Text justifyContent="space-between" color='dark.headtext' w={'300px'} fontSize='14' pb={30}>
-              A África é o terceiro continente mais extenso com cerca de 30 milhões de quilômetros
-              quadrados, cobrindo 20,3% da área total da terra firme do planeta. É o segundo continente
-              mais populoso do mundo com cerca de um bilhão de pessoas, representando cerca de um
-              sétimo da população mundial, e 54 países independentes. Apresentando uma grande
-              diversidade étnica, cultural, social e política.
+              A África é o segundo continente mais populoso do 
+              mundo com cerca de um bilhão de pessoas, representando 
+              cerca de um sétimo da população mundial, e 54 países independentes. 
+              Apresentando uma grande diversidade étnica, cultural, social e política.
               </Text>
               <Stack direction={'row'} spacing={'40px'}>
                 <Stack justifyContent="center" alignItems={"center"} >
@@ -129,7 +128,7 @@ export default function Europa()
                 </Stack>
                 <Stack justifyContent="center" alignItems={"center"} >
                   <Text as='b' color='highlight' fontSize='32'>
-                    32
+                    9
                   </Text>
                   <Text color='dark.headtext' >
                     cidades +100 ⓘ
