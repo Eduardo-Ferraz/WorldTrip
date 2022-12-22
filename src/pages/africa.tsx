@@ -17,7 +17,7 @@ type IHits = {
   totalHits: number;
 }
 
-export default function America()
+export default function Europa()
 {
   const [imagesUrl, setImagesUrl] = useState<IHits[] | null>();
 
@@ -39,7 +39,7 @@ export default function America()
       console.log(photos);
     }
 
-    getNewPhoto(["rio_de_janeiro sightseeing", "machu sightseeing", "new_york sightseeing", "argentine sightseeing", "mexico sightseeing"]);
+    getNewPhoto(["cape town sightseeing", "Marrocos", "Alexandria", "Luanda", "Dar es salaam"]);
 
   }, []);
   
@@ -56,7 +56,7 @@ export default function America()
       </Head>
       <main>
         <Navbar />
-        <Banner bg="America.jpg" text="América" />
+        <Banner bg="Europa.png" text="África" />
         <Flex h={80} justifyContent="center" alignItems={"center"} bg="white">
           <Stack direction={'row'}
             justifyContent="center"
@@ -65,13 +65,14 @@ export default function America()
           >
             <Show above='sm'>
               <Text mt={'10%'} pr={12} color='dark.headtext' w={'600px'} fontSize='24'>
-              A América é o segundo maior continente em área, localizado no hemisfério ocidental e que se
-              estende, no sentido norte-sul, desde o oceano Ártico até o cabo Horn, ao longo de cerca de
-              15 mil quilômetros
+              A África é o segundo continente mais populoso do 
+              mundo com cerca de um bilhão de pessoas, representando 
+              cerca de um sétimo da população mundial, e 54 países independentes. 
+              Apresentando uma grande diversidade étnica, cultural, social e política.
               </Text>
               <Stack justifyContent="center" alignItems={"center"} mt={10}>
                 <Text as='b' color='highlight' fontSize='48'>
-                  35
+                  54
                 </Text>
                 <Text as='b' color='dark.headtext'>
                   países
@@ -79,7 +80,7 @@ export default function America()
               </Stack>
               <Stack justifyContent="center" alignItems={"center"} >
                 <Text as='b' color='highlight' fontSize='48'>
-                  34
+                  197
                 </Text>
                 <Text as='b' color='dark.headtext'>
                   línguas
@@ -87,7 +88,7 @@ export default function America()
               </Stack>
               <Stack justifyContent="center" alignItems={"center"} >
                 <Text as='b' color='highlight' fontSize='48'>
-                  20
+                  27
                 </Text>
                 <Text as='b' color='dark.headtext'>
                   cidades +100
@@ -103,14 +104,16 @@ export default function America()
 
             <Show below='sm'>
               <Text justifyContent="space-between" color='dark.headtext' w={'300px'} fontSize='14' pb={30}>
-              A América é o segundo maior continente em área, localizado no hemisfério ocidental e que se
-              estende, no sentido norte-sul, desde o oceano Ártico até o cabo Horn, ao longo de cerca de
-              15 mil quilômetros
+              A África é o terceiro continente mais extenso com cerca de 30 milhões de quilômetros
+              quadrados, cobrindo 20,3% da área total da terra firme do planeta. É o segundo continente
+              mais populoso do mundo com cerca de um bilhão de pessoas, representando cerca de um
+              sétimo da população mundial, e 54 países independentes. Apresentando uma grande
+              diversidade étnica, cultural, social e política.
               </Text>
               <Stack direction={'row'} spacing={'40px'}>
                 <Stack justifyContent="center" alignItems={"center"} >
                   <Text as='b' color='highlight' fontSize='32'>
-                    35
+                    54
                   </Text>
                   <Text color='dark.headtext'>
                     países
@@ -118,7 +121,7 @@ export default function America()
                 </Stack>
                 <Stack justifyContent="center" alignItems={"center"} >
                   <Text as='b' color='highlight' fontSize='32'>
-                    34
+                    197
                   </Text>
                   <Text color='dark.headtext'>
                     línguas
@@ -126,7 +129,7 @@ export default function America()
                 </Stack>
                 <Stack justifyContent="center" alignItems={"center"} >
                   <Text as='b' color='highlight' fontSize='32'>
-                    20
+                    27
                   </Text>
                   <Text color='dark.headtext' >
                     cidades +100
@@ -145,33 +148,33 @@ export default function America()
             <Grid mb = {20} templateColumns={['repeat(1, 1fr)', 'repeat(2, 1fr)', 'repeat(3, 1fr)', 'repeat(4, 1fr)']} gap={6} ml='10%' mr='10%'>
               <Card_cidades 
                 bg={imagesUrl[0].hits[Math.floor(Math.random() * imagesUrl[0].hits.length)].webformatURL}
-                title='Rio de Janeiro' 
-                text='Brasil' 
-                flag ='https://cdn-icons-png.flaticon.com/512/551/551856.png'
+                title='Cidade do Cabo' 
+                text='África do Sul' 
+                flag ='https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/United-kingdom_flag_icon_round.svg/2048px-United-kingdom_flag_icon_round.svg.png'
               />
               <Card_cidades 
                 bg={imagesUrl[1].hits[Math.floor(Math.random() * imagesUrl[1].hits.length)].webformatURL} 
-                title='Machu Picchu' 
-                text='Peru' 
-                flag ='https://cdn-icons-png.flaticon.com/512/197/197563.png'
+                title='Casablanca' 
+                text='Marrocos' 
+                flag ='https://cdn-icons-png.flaticon.com/512/197/197560.png'
               />
               <Card_cidades 
                 bg={imagesUrl[2].hits[Math.floor(Math.random() * imagesUrl[2].hits.length)].webformatURL} 
-                title='Nova Iorque' 
-                text='Estados Unidos' 
-                flag ='https://cdn-icons-png.flaticon.com/512/4628/4628635.png'
+                title='Alexandria' 
+                text='Egito' 
+                flag ='https://media.istockphoto.com/id/690489086/vector/italian-flag.jpg?s=612x612&w=0&k=20&c=kWZWChm94M--bl4uZgmY-tt-OuJQUvt1ujDp0OWSDp8='
               />
               <Card_cidades 
                 bg={imagesUrl[3].hits[Math.floor(Math.random() * imagesUrl[3].hits.length)].webformatURL} 
-                title='Buenos Aires' 
-                text='Argentina' 
-                flag ='https://cdn-icons-png.flaticon.com/512/197/197573.png'
+                title='Luanda' 
+                text='Angola' 
+                flag ='https://media.istockphoto.com/id/894491752/vector/czech-republic-flag-vector-round-flat-icon.jpg?s=170667a&w=0&k=20&c=VaFj9bAOkeNKoL4IHPqVAKg-WR9X5zU91HoiBYQfrDg='
               />
               <Card_cidades 
                 bg={imagesUrl[4].hits[Math.floor(Math.random() * imagesUrl[4].hits.length)].webformatURL} 
-                title='Cidade do México' 
-                text='México' 
-                flag ='https://cdn-icons-png.flaticon.com/512/5372/5372848.png'
+                title='Dar es Salaam' 
+                text='Tanzânia' 
+                flag ='https://cdn-icons-png.flaticon.com/512/323/323275.png'
               />
             </Grid>
           </>

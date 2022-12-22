@@ -91,8 +91,8 @@ export default function America()
                   27
                 </Text>
                 <Text as='b' color='dark.headtext'>
-                    cidades +100
-                  </Text>
+                  cidades +100
+                </Text>
               </Stack>
             </Show>
           </Stack>

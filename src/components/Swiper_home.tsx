@@ -43,7 +43,7 @@ export default function Swiper_home()
       console.log(photos);
     }
 
-    getNewPhoto(["europe sightseeing","america sightseeing","asia sightseeing"]);
+    getNewPhoto(["europe sightseeing", "america sightseeing", "asia sightseeing", "africa sightseeing", "oceania"]);
 
   }, []);
 
@@ -163,7 +163,7 @@ export default function Swiper_home()
               </SwiperSlide>
               <SwiperSlide>
                 <Link
-                href='/america'
+                href='/asia'
                 _hover={{
                   textDecoration: 'underline #FFBA08' 
                 }}
@@ -200,6 +200,100 @@ export default function Swiper_home()
                             as='b'
                             fontSize={['1xl', '2xl']}>
                             O maior continente.
+                          </Text>
+                        </Stack>
+                      </VStack>
+                    </Flex>
+                  </>
+                )}
+                </Link>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Link
+                href='/africa'
+                _hover={{
+                  textDecoration: 'underline #FFBA08' 
+                }}
+                >
+                { imagesUrl !== null && imagesUrl !== undefined &&( 
+                  <>
+                    <Flex
+                      w={'full'}
+                      h={'60vh'}
+                      bgImage={
+                        imagesUrl[3].hits[Math.floor(Math.random() * imagesUrl[3].hits.length)].webformatURL
+                      }
+                      backgroundSize={'cover'}
+                      backgroundPosition={'center center'}>
+                      <VStack
+                        w={'full'}
+                        justify={'center'}
+                        px={'6'}
+                        bgGradient={'linear(to-r, blackAlpha.600, transparent)'}>
+                        
+                        <Stack maxW={'2xl'} align='center' spacing={6}>
+                          <Text
+                            color='light.headtext'
+                            fontWeight={700}
+                            lineHeight={1.2}
+                            as='b'
+                            fontSize={['3xl', '4xl']}>
+                            África
+                          </Text>
+                          <Text
+                            color='light.info'
+                            fontWeight={700}
+                            lineHeight={1.2}
+                            as='b'
+                            fontSize={['1xl', '2xl']}>
+                            O berço da humanidade.
+                          </Text>
+                        </Stack>
+                      </VStack>
+                    </Flex>
+                  </>
+                )}
+                </Link>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Link
+                href='/oceania'
+                _hover={{
+                  textDecoration: 'underline #FFBA08' 
+                }}
+                >
+                { imagesUrl !== null && imagesUrl !== undefined &&( 
+                  <>
+                    <Flex
+                      w={'full'}
+                      h={'60vh'}
+                      bgImage={
+                        imagesUrl[4].hits[Math.floor(Math.random() * imagesUrl[4].hits.length)].webformatURL
+                      }
+                      backgroundSize={'cover'}
+                      backgroundPosition={'center center'}>
+                      <VStack
+                        w={'full'}
+                        justify={'center'}
+                        px={'6'}
+                        bgGradient={'linear(to-r, blackAlpha.600, transparent)'}>
+                        
+                        <Stack maxW={'2xl'} align='center' spacing={6}>
+                          <Text
+                            color='light.headtext'
+                            fontWeight={700}
+                            lineHeight={1.2}
+                            as='b'
+                            fontSize={['3xl', '4xl']}>
+                            Oceania
+                          </Text>
+                          <Text
+                            color='light.info'
+                            fontWeight={700}
+                            lineHeight={1.2}
+                            as='b'
+                            fontSize={['1xl', '2xl']}>
+                            Arquipélago inestimável.
                           </Text>
                         </Stack>
                       </VStack>
