@@ -1,8 +1,10 @@
 <!-- ABOUT THE PROJECT -->
 ## Sobre o projeto
 
-Trata-se de uma aplicação com intuito de mostrar ao usuário os continentes e os principais pontos turísticos desse
-continente.
+Aplicação com intuito de mostrar ao usuário os continentes e os principais pontos turísticos desse
+continente. Novas imagens de cada local são exibidas a cada acesso.
+
+Link do site: [https://world-trip-six.vercel.app/](WorldTrip)
 
 ### Feito com
 
@@ -32,8 +34,6 @@ Eduardo Ferraz - eduardoc.ferraz2@gmail.com / https://www.linkedin.com/in/eduard
 Emilly Lopes - emillylopsneves@gmail.com
 
 Lucas D. - lucas.nitz@hotmail.com
-
-Link do site: https://world-trip-six.vercel.app/
 
 <!-- ACKNOWLEDGMENTS -->
 ## Agradecimentos
