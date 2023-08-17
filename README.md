@@ -5,7 +5,7 @@ Aplicação com intuito de mostrar ao usuário os continentes e os principais po
 continente. 
 Novas imagens de cada local são exibidas a cada acesso.
 
-Link do site: [https://world-trip-six.vercel.app/](WorldTrip)
+Link do site: [WorldTrip]([https://world-trip-six.vercel.app/)
 
 ### Feito com
 
