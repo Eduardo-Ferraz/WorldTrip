@@ -2,7 +2,8 @@
 ## Sobre o projeto
 
 Aplicação com intuito de mostrar ao usuário os continentes e os principais pontos turísticos desse
-continente. Novas imagens de cada local são exibidas a cada acesso.
+continente. 
+Novas imagens de cada local são exibidas a cada acesso.
 
 Link do site: [https://world-trip-six.vercel.app/](WorldTrip)
 
